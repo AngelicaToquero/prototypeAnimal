@@ -2,12 +2,20 @@ public class TestAnimal {
     public static void main(String[] args) {
         AnimalRegistry registry = new AnimalRegistry();
 
-        Animal sheep1 = registry.createSheep("Shaun");
-        Animal cow1 = registry.createCow();
-        Animal horse1 = registry.createHorse();
+        Animal sheperd = registry.createSheep("Sheperd");
+        Animal cauly = registry.createCow();
+        Animal horseey = registry.createHorse();
 
-        sheep1.makeSound();
-        cow1.makeSound();
-        horse1.makeSound();
+        System.out.println("=== Animal Sounds ===");
+        sheperd.makeSound();
+        cauly.makeSound();
+        horseey.makeSound();
+
+        System.out.println("\n=== Animal Details ===");
+        System.out.println(sheperd);
+        System.out.println();
+        System.out.println(cauly);
+        System.out.println();
+        System.out.println(horseey);
     }
 }

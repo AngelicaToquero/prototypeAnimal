@@ -10,17 +10,25 @@ public class Cow implements Animal {
     }
 
     @Override
-    public Cow clone() {
+    public Animal clone() {
         return new Cow(legs, sound, food);
     }
 
     @Override
     public void makeSound() {
-        System.out.println("Cow says " + sound);
+        System.out.println("Cow says: " + sound);
     }
 
     @Override
     public String getType() {
         return "Cow";
+    }
+
+    @Override
+    public String toString() {
+        return "Cow\n" +
+               "Legs: " + legs + "\n" +
+               "Sound: '" + sound + "'\n" +
+               "Food: " + food;
     }
 }

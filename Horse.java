@@ -12,17 +12,26 @@ public class Horse implements Animal {
     }
 
     @Override
-    public Horse clone() {
+    public Animal clone() {
         return new Horse(legs, sound, food, color);
     }
 
     @Override
     public void makeSound() {
-        System.out.println("Horse says " + sound);
+        System.out.println("Horse says: " + sound);
     }
 
     @Override
     public String getType() {
         return "Horse";
+    }
+
+    @Override
+    public String toString() {
+        return "Horse\n" +
+               "Legs: " + legs + "\n" +
+               "Sound: '" + sound + "'\n" +
+               "Food: " + food + "\n" +
+               "Color: " + color;
     }
 }

@@ -12,17 +12,38 @@ public class Sheep implements Animal {
     }
 
     @Override
-    public Sheep clone() {
+    public Animal clone() {
         return new Sheep(legs, sound, food, name);
     }
 
     @Override
     public void makeSound() {
-        System.out.println(name + " says " + sound);
+        System.out.println(name + " says: " + sound);
     }
 
     @Override
     public String getType() {
         return "Sheep";
+    }
+
+    @Override
+    public String toString() {
+        return "Sheep\n" +
+               "Name: " + name + "\n" +
+               "Legs: " + legs + "\n" +
+               "Sound: '" + sound + "'\n" +
+               "Food: " + food;
+    }
+
+    public int getLegs() {
+        return legs;
+    }
+
+    public String getSound() {
+        return sound;
+    }
+
+    public String getFood() {
+        return food;
     }
 }
